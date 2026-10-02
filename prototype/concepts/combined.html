@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="data:," />
+    <title>Mara and Dev — combined wedding prototype</title>
+    <link rel="stylesheet" href="combined.css?v=weekend-story-20261001" />
+    <link rel="stylesheet" href="guest-theme.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#product-frame">Skip prototype controls</a>
+    <header class="review-bar" aria-label="Prototype review controls">
+      <details>
+        <summary><strong>Mock wedding · controls</strong><span id="review-selection"></span></summary>
+        <p>Fictional wedding data. Demo changes stay in this tab, including when you visit Site style. Changing the case or Reset reloads fictional records.</p>
+        <form id="review-controls">
+          <label>View <select id="role-select"><option value="guest">Guest</option><option value="organizer">Organizer</option></select></label>
+          <label>Case <select id="scenario-select"><option value="S1">S1 — Private Friday schedule</option><option value="S2">S2 — Shared wedding question</option><option value="S3">S3 — Arrival and open plans</option><option value="S4">S4 — Linked correction</option><option value="S5">S5 — Response-mode guards</option><option value="S6">S6 — Recovery and lodging</option></select></label>
+          <label>State <select id="state-select"><option value="ready">Ready</option><option value="empty">Empty</option><option value="loading">Loading</option><option value="load-error">Load failure</option><option value="save-error">Failed save</option><option value="uncertain">Uncertain save</option><option value="stale">Stale totals</option><option value="large-text">200% text</option></select></label>
+          <button type="button" id="reset-button">Reset this case</button>
+        </form>
+        <div id="review-scenario"></div>
+      </details>
+    </header>
+    <main id="product-frame" tabindex="-1"></main>
+    <div class="sr-only" id="announcer" aria-live="assertive"></div>
+    <script type="module" src="combined-app.mjs?v=weekend-story-20261001"></script>
+  </body>
+</html>

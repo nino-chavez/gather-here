@@ -1,0 +1,27 @@
+@font-face { font-family:Pinyon; src:url('./assets/fonts/PinyonScript-Regular.ttf') format('truetype'); font-display:swap; }
+.guest-shell { --guest-cover:var(--paper); --guest-cover-text:var(--cobalt); }
+.guest-shell .product-header { background-color:var(--guest-cover); color:var(--guest-cover-text); }
+.guest-shell .product-header :is(h1,.couple-mark,.couple-mark b,.wedding-place,.subtitle,nav button) { color:inherit; }
+.guest-shell .product-header nav button.is-active { border-color:currentColor; }
+.guest-shell .primary { background:var(--cobalt); border-color:var(--cobalt); color:var(--guest-button-text,#fff); box-shadow:none; }
+.guest-shell .primary:hover { filter:brightness(.9); }
+.guest-shell .status { padding:.2rem .35rem; background:#fffdf8; border-radius:3px; }
+.guest-shell[data-spacing="generous"] .product-header { grid-template-columns:1fr; text-align:center; justify-items:center; padding-block:2.5rem 1rem; gap:1.5rem; }
+.guest-shell[data-spacing="generous"] .couple-mark { align-self:center; justify-items:center; font-size:clamp(2.75rem,5vw,4.5rem); line-height:1.2; }
+.guest-shell[data-spacing="generous"] .couple-mark b { font-size:1.25rem; }
+.guest-shell[data-spacing="generous"] .product-heading h1 { font-size:1.65rem; letter-spacing:0; }
+.guest-shell[data-spacing="generous"] nav { justify-content:center; }
+.guest-shell[data-lettering="script"] .couple-mark { font-family:Pinyon,Georgia,serif; font-size:clamp(2.6rem,4.5vw,4rem); line-height:1.1; font-weight:400; }
+.guest-shell[data-lettering="script"] .couple-mark b { font-family:Georgia,serif; font-size:1rem; }
+.guest-shell[data-material="image"] .product-header { background-image:var(--guest-image); background-position:center; background-size:cover; }
+.guest-shell[data-material="image"] .product-header > * { background:var(--guest-cover); padding:.65rem 1rem; }
+.guest-shell nav a { display:inline-flex; align-items:center; min-height:44px; }
+@media(max-width:620px) { .guest-shell[data-spacing="generous"] .couple-mark { grid-template-columns:1fr; } .guest-shell[data-spacing="compact"][data-lettering="script"] .couple-mark { font-size:2.25rem; } }
+html[data-preview="true"] .review-bar { display:none; }
+html[data-preview="true"] .prototype { min-height:100vh; }
+
+.guest-shell[data-page="reply"] .product-header, .guest-shell[data-page="review"] .product-header { padding-block:1.25rem .75rem; gap:.75rem; }
+.guest-shell[data-page="reply"] .couple-mark, .guest-shell[data-page="review"] .couple-mark { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:center; gap:.35rem; font-size:1.65rem; }
+.guest-shell[data-page="reply"][data-lettering="script"] .couple-mark,.guest-shell[data-page="review"][data-lettering="script"] .couple-mark { font-size:2rem; }
+.guest-shell[data-page="reply"] .subtitle,.guest-shell[data-page="review"] .subtitle { display:none; }
+@media(max-width:980px) { .guest-shell[data-page="reply"] .guest-scope,.guest-shell[data-page="review"] .guest-scope { padding-block:.85rem; }.guest-shell[data-page="reply"] .guest-scope h2,.guest-shell[data-page="review"] .guest-scope h2 { display:none; }.guest-shell[data-page="reply"] .guest-scope p,.guest-shell[data-page="review"] .guest-scope p { margin:.3rem 0; font-size:.9rem; }.guest-shell[data-page="reply"] .remaining,.guest-shell[data-page="review"] .remaining { padding-top:.5rem; }.guest-shell[data-page="reply"] .remaining strong,.guest-shell[data-page="review"] .remaining strong { font-size:1.25rem; } }

@@ -1,0 +1,1329 @@
+{
+  "fixtureId": "wedding_weekend_story_v1",
+  "synthetic": true,
+  "evidenceLabel": "Entirely fictional local prototype data. It is not customer, market, usability, reservation, or production data.",
+  "numericValuesLabel": "Every count, date, time, duration, total, and viewport value is invented for this local prototype.",
+  "scope": {
+    "purpose": "Demonstrate one coherent wedding weekend with schedule visibility separated from attendance questions.",
+    "notAProductionSchema": true,
+    "confirmedProductChoices": [
+      "The first organizer is one couple managing their own wedding.",
+      "Guest identity uses curated styles with a few personal choices.",
+      "Ceremony and reception use one attendance question per person.",
+      "A schedule item may require no reply."
+    ],
+    "openChoices": [
+      "D-12: what happens when an invited event becomes incomplete",
+      "D-13: how event changes affect existing questions and replies",
+      "Production storage, authentication, migration, and publishing"
+    ]
+  },
+  "fixtureStory": {
+    "setting": "Mara Ellison and Dev Sato marry in fictional Cedar Vale from June 14 through June 16, 2030.",
+    "sampleLimit": "Eight invented guests are a small demo sample, not a realistic scale test.",
+    "inventedChoices": [
+      {
+        "choice": "Amina is in the wedding party and Theodore is her partner.",
+        "reason": "This creates a private schedule-only rehearsal for Amina and a private rehearsal-dinner invitation for both people without treating household membership as access."
+      },
+      {
+        "choice": "Eleanor is the explicit reply contact for Mateo and Lucía.",
+        "reason": "This demonstrates per-person answers under named authority while keeping their ordinary guest invitations separate."
+      },
+      {
+        "choice": "Benjamin attends Friday events but has not settled his Sunday flight.",
+        "reason": "This provides a Friday-arrival case and a genuinely unanswered brunch question."
+      },
+      {
+        "choice": "Priya and Mateo arrive Saturday, while Lucía arrives Friday.",
+        "reason": "This makes the welcome-drinks declines and the two arrival-guidance cases coherent."
+      },
+      {
+        "choice": "Noor has not replied to any attendance question.",
+        "reason": "This keeps unanswered distinct from a decline in guest and organizer views."
+      }
+    ],
+    "privacyNote": "Scenario rationale is fixture documentation only. Guest screens show invitation scope and practical guidance, not explanations about other guests."
+  },
+  "wedding": {
+    "id": "wed_juniper",
+    "displayName": "Mara and Dev's wedding weekend",
+    "organizerModel": "one couple managing their own wedding",
+    "organizerIds": [
+      "org_mara",
+      "org_dev"
+    ],
+    "locationLabel": "Cedar Vale",
+    "styleContext": {
+      "policy": "curated styles with a few personal choices",
+      "selectedStyleId": null,
+      "personalChoices": []
+    }
+  },
+  "organizers": [
+    {
+      "id": "org_mara",
+      "name": "Mara Ellison",
+      "role": "organizing partner"
+    },
+    {
+      "id": "org_dev",
+      "name": "Dev Sato",
+      "role": "organizing partner"
+    }
+  ],
+  "locations": [
+    {
+      "id": "loc_juniper",
+      "name": "Juniper Hall",
+      "place": "4 Juniper Lane, Cedar Vale"
+    },
+    {
+      "id": "loc_cedar_table",
+      "name": "Cedar Table Room",
+      "place": "18 Market Street, Cedar Vale"
+    },
+    {
+      "id": "loc_orchard",
+      "name": "Orchard Courtyard",
+      "place": "Juniper Hall, Cedar Vale"
+    },
+    {
+      "id": "loc_garden",
+      "name": "North Garden",
+      "place": "Juniper Hall, Cedar Vale"
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_rehearsal",
+      "name": "Ceremony rehearsal",
+      "startsAt": "2030-06-14T16:30:00-05:00",
+      "locationId": "loc_juniper",
+      "state": "active",
+      "responseMode": "none",
+      "attendanceQuestionId": null,
+      "authoring": {
+        "date": "2030-06-14",
+        "startTime": "16:30",
+        "timezone": "America/Chicago",
+        "endTime": "17:15",
+        "venueName": "Juniper Hall",
+        "venueLocation": "4 Juniper Lane, Cedar Vale",
+        "locationToFollow": false,
+        "notes": "Wedding party walkthrough. No reply is needed.",
+        "readiness": "ready"
+      }
+    },
+    {
+      "id": "evt_rehearsal_dinner",
+      "name": "Rehearsal dinner",
+      "startsAt": "2030-06-14T18:00:00-05:00",
+      "locationId": "loc_cedar_table",
+      "state": "active",
+      "responseMode": "separate",
+      "attendanceQuestionId": "q_rehearsal_dinner",
+      "authoring": {
+        "date": "2030-06-14",
+        "startTime": "18:00",
+        "timezone": "America/Chicago",
+        "endTime": "20:00",
+        "venueName": "Cedar Table Room",
+        "venueLocation": "18 Market Street, Cedar Vale",
+        "locationToFollow": false,
+        "notes": "Private dinner for the named invitees.",
+        "readiness": "ready"
+      }
+    },
+    {
+      "id": "evt_welcome",
+      "name": "Welcome drinks",
+      "startsAt": "2030-06-14T20:30:00-05:00",
+      "locationId": "loc_orchard",
+      "state": "active",
+      "responseMode": "separate",
+      "attendanceQuestionId": "q_welcome",
+      "authoring": {
+        "date": "2030-06-14",
+        "startTime": "20:30",
+        "timezone": "America/Chicago",
+        "endTime": "22:30",
+        "venueName": "Orchard Courtyard",
+        "venueLocation": "Juniper Hall, Cedar Vale",
+        "locationToFollow": false,
+        "notes": "Drinks and light bites outside Juniper Hall.",
+        "readiness": "ready"
+      }
+    },
+    {
+      "id": "evt_ceremony",
+      "name": "Ceremony",
+      "startsAt": "2030-06-15T16:30:00-05:00",
+      "locationId": "loc_juniper",
+      "state": "active",
+      "responseMode": "shared",
+      "attendanceQuestionId": "q_wedding",
+      "authoring": {
+        "date": "2030-06-15",
+        "startTime": "16:30",
+        "timezone": "America/Chicago",
+        "endTime": "17:15",
+        "venueName": "Juniper Hall",
+        "venueLocation": "4 Juniper Lane, Cedar Vale",
+        "locationToFollow": false,
+        "notes": "Please arrive by 4:00 PM through the east garden gate.",
+        "readiness": "ready"
+      }
+    },
+    {
+      "id": "evt_dinner",
+      "name": "Reception",
+      "startsAt": "2030-06-15T18:00:00-05:00",
+      "locationId": "loc_juniper",
+      "state": "active",
+      "responseMode": "shared",
+      "attendanceQuestionId": "q_wedding",
+      "authoring": {
+        "date": "2030-06-15",
+        "startTime": "18:00",
+        "timezone": "America/Chicago",
+        "endTime": "23:00",
+        "venueName": "Juniper Hall",
+        "venueLocation": "4 Juniper Lane, Cedar Vale",
+        "locationToFollow": false,
+        "notes": "Dinner and dancing follow the ceremony.",
+        "readiness": "ready"
+      }
+    },
+    {
+      "id": "evt_brunch",
+      "name": "Farewell brunch",
+      "startsAt": "2030-06-16T10:00:00-05:00",
+      "locationId": "loc_garden",
+      "state": "active",
+      "responseMode": "separate",
+      "attendanceQuestionId": "q_brunch",
+      "authoring": {
+        "date": "2030-06-16",
+        "startTime": "10:00",
+        "timezone": "America/Chicago",
+        "endTime": "12:00",
+        "venueName": "North Garden",
+        "venueLocation": "Juniper Hall, Cedar Vale",
+        "locationToFollow": false,
+        "notes": "A relaxed goodbye before Sunday departures.",
+        "readiness": "ready"
+      }
+    }
+  ],
+  "attendanceQuestions": [
+    {
+      "id": "q_rehearsal_dinner",
+      "name": "Rehearsal dinner",
+      "responseMode": "separate",
+      "eventIds": [
+        "evt_rehearsal_dinner"
+      ]
+    },
+    {
+      "id": "q_welcome",
+      "name": "Welcome drinks",
+      "responseMode": "separate",
+      "eventIds": [
+        "evt_welcome"
+      ]
+    },
+    {
+      "id": "q_wedding",
+      "name": "Wedding ceremony and reception",
+      "responseMode": "shared",
+      "eventIds": [
+        "evt_ceremony",
+        "evt_dinner"
+      ]
+    },
+    {
+      "id": "q_brunch",
+      "name": "Farewell brunch",
+      "responseMode": "separate",
+      "eventIds": [
+        "evt_brunch"
+      ]
+    }
+  ],
+  "households": [
+    {
+      "id": "hh_laurent",
+      "name": "Laurent household",
+      "guestIds": [
+        "gst_amina",
+        "gst_theodore"
+      ]
+    },
+    {
+      "id": "hh_ortega",
+      "name": "Cárdenas-Ortega household",
+      "guestIds": [
+        "gst_eleanor",
+        "gst_mateo",
+        "gst_lucia"
+      ]
+    }
+  ],
+  "guests": [
+    {
+      "id": "gst_amina",
+      "name": "Amina Laurent",
+      "householdId": "hh_laurent",
+      "arrival": "Friday"
+    },
+    {
+      "id": "gst_theodore",
+      "name": "Theodore Maximilian Laurent",
+      "householdId": "hh_laurent",
+      "arrival": "Friday"
+    },
+    {
+      "id": "gst_eleanor",
+      "name": "Eleanor Cárdenas-Ortega",
+      "householdId": "hh_ortega",
+      "arrival": "Friday"
+    },
+    {
+      "id": "gst_mateo",
+      "name": "Mateo Ortega",
+      "householdId": "hh_ortega",
+      "arrival": "Saturday"
+    },
+    {
+      "id": "gst_lucia",
+      "name": "Lucía Ortega",
+      "householdId": "hh_ortega",
+      "arrival": "Friday"
+    },
+    {
+      "id": "gst_priya",
+      "name": "Priya Nanduri",
+      "householdId": null,
+      "arrival": "Saturday"
+    },
+    {
+      "id": "gst_benjamin",
+      "name": "Benjamin Alexander Okafor-Smith",
+      "householdId": null,
+      "arrival": "Friday"
+    },
+    {
+      "id": "gst_noor",
+      "name": "Noor Haddad",
+      "householdId": null,
+      "arrival": "Friday"
+    }
+  ],
+  "delegations": [
+    {
+      "id": "del_eleanor_mateo",
+      "delegatorGuestId": "gst_mateo",
+      "delegateGuestId": "gst_eleanor",
+      "scope": "eligible attendance questions only",
+      "state": "active"
+    },
+    {
+      "id": "del_eleanor_lucia",
+      "delegatorGuestId": "gst_lucia",
+      "delegateGuestId": "gst_eleanor",
+      "scope": "eligible attendance questions only",
+      "state": "active"
+    }
+  ],
+  "eventInvitations": [
+    {
+      "id": "inv_rehearsal_amina",
+      "eventId": "evt_rehearsal",
+      "guestId": "gst_amina",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_rehearsal_dinner_amina",
+      "eventId": "evt_rehearsal_dinner",
+      "guestId": "gst_amina",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_rehearsal_dinner_theodore",
+      "eventId": "evt_rehearsal_dinner",
+      "guestId": "gst_theodore",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_welcome_amina",
+      "eventId": "evt_welcome",
+      "guestId": "gst_amina",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_welcome_theodore",
+      "eventId": "evt_welcome",
+      "guestId": "gst_theodore",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_welcome_eleanor",
+      "eventId": "evt_welcome",
+      "guestId": "gst_eleanor",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_welcome_mateo",
+      "eventId": "evt_welcome",
+      "guestId": "gst_mateo",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_welcome_lucia",
+      "eventId": "evt_welcome",
+      "guestId": "gst_lucia",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_welcome_priya",
+      "eventId": "evt_welcome",
+      "guestId": "gst_priya",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_welcome_benjamin",
+      "eventId": "evt_welcome",
+      "guestId": "gst_benjamin",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_welcome_noor",
+      "eventId": "evt_welcome",
+      "guestId": "gst_noor",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_ceremony_amina",
+      "eventId": "evt_ceremony",
+      "guestId": "gst_amina",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_ceremony_theodore",
+      "eventId": "evt_ceremony",
+      "guestId": "gst_theodore",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_ceremony_eleanor",
+      "eventId": "evt_ceremony",
+      "guestId": "gst_eleanor",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_ceremony_mateo",
+      "eventId": "evt_ceremony",
+      "guestId": "gst_mateo",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_ceremony_lucia",
+      "eventId": "evt_ceremony",
+      "guestId": "gst_lucia",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_ceremony_priya",
+      "eventId": "evt_ceremony",
+      "guestId": "gst_priya",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_ceremony_benjamin",
+      "eventId": "evt_ceremony",
+      "guestId": "gst_benjamin",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_ceremony_noor",
+      "eventId": "evt_ceremony",
+      "guestId": "gst_noor",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_dinner_amina",
+      "eventId": "evt_dinner",
+      "guestId": "gst_amina",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_dinner_theodore",
+      "eventId": "evt_dinner",
+      "guestId": "gst_theodore",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_dinner_eleanor",
+      "eventId": "evt_dinner",
+      "guestId": "gst_eleanor",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_dinner_mateo",
+      "eventId": "evt_dinner",
+      "guestId": "gst_mateo",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_dinner_lucia",
+      "eventId": "evt_dinner",
+      "guestId": "gst_lucia",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_dinner_priya",
+      "eventId": "evt_dinner",
+      "guestId": "gst_priya",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_dinner_benjamin",
+      "eventId": "evt_dinner",
+      "guestId": "gst_benjamin",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_dinner_noor",
+      "eventId": "evt_dinner",
+      "guestId": "gst_noor",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_brunch_amina",
+      "eventId": "evt_brunch",
+      "guestId": "gst_amina",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_brunch_theodore",
+      "eventId": "evt_brunch",
+      "guestId": "gst_theodore",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_brunch_eleanor",
+      "eventId": "evt_brunch",
+      "guestId": "gst_eleanor",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_brunch_mateo",
+      "eventId": "evt_brunch",
+      "guestId": "gst_mateo",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_brunch_lucia",
+      "eventId": "evt_brunch",
+      "guestId": "gst_lucia",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_brunch_priya",
+      "eventId": "evt_brunch",
+      "guestId": "gst_priya",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_brunch_benjamin",
+      "eventId": "evt_brunch",
+      "guestId": "gst_benjamin",
+      "eligibility": "eligible"
+    },
+    {
+      "id": "inv_brunch_noor",
+      "eventId": "evt_brunch",
+      "guestId": "gst_noor",
+      "eligibility": "eligible"
+    }
+  ],
+  "attendanceRequests": [
+    {
+      "id": "req_rehearsal_dinner_amina",
+      "questionId": "q_rehearsal_dinner",
+      "guestId": "gst_amina",
+      "coveredEventIds": [
+        "evt_rehearsal_dinner"
+      ]
+    },
+    {
+      "id": "req_rehearsal_dinner_theodore",
+      "questionId": "q_rehearsal_dinner",
+      "guestId": "gst_theodore",
+      "coveredEventIds": [
+        "evt_rehearsal_dinner"
+      ]
+    },
+    {
+      "id": "req_welcome_amina",
+      "questionId": "q_welcome",
+      "guestId": "gst_amina",
+      "coveredEventIds": [
+        "evt_welcome"
+      ]
+    },
+    {
+      "id": "req_welcome_theodore",
+      "questionId": "q_welcome",
+      "guestId": "gst_theodore",
+      "coveredEventIds": [
+        "evt_welcome"
+      ]
+    },
+    {
+      "id": "req_welcome_eleanor",
+      "questionId": "q_welcome",
+      "guestId": "gst_eleanor",
+      "coveredEventIds": [
+        "evt_welcome"
+      ]
+    },
+    {
+      "id": "req_welcome_mateo",
+      "questionId": "q_welcome",
+      "guestId": "gst_mateo",
+      "coveredEventIds": [
+        "evt_welcome"
+      ]
+    },
+    {
+      "id": "req_welcome_lucia",
+      "questionId": "q_welcome",
+      "guestId": "gst_lucia",
+      "coveredEventIds": [
+        "evt_welcome"
+      ]
+    },
+    {
+      "id": "req_welcome_priya",
+      "questionId": "q_welcome",
+      "guestId": "gst_priya",
+      "coveredEventIds": [
+        "evt_welcome"
+      ]
+    },
+    {
+      "id": "req_welcome_benjamin",
+      "questionId": "q_welcome",
+      "guestId": "gst_benjamin",
+      "coveredEventIds": [
+        "evt_welcome"
+      ]
+    },
+    {
+      "id": "req_welcome_noor",
+      "questionId": "q_welcome",
+      "guestId": "gst_noor",
+      "coveredEventIds": [
+        "evt_welcome"
+      ]
+    },
+    {
+      "id": "req_wedding_amina",
+      "questionId": "q_wedding",
+      "guestId": "gst_amina",
+      "coveredEventIds": [
+        "evt_ceremony",
+        "evt_dinner"
+      ]
+    },
+    {
+      "id": "req_wedding_theodore",
+      "questionId": "q_wedding",
+      "guestId": "gst_theodore",
+      "coveredEventIds": [
+        "evt_ceremony",
+        "evt_dinner"
+      ]
+    },
+    {
+      "id": "req_wedding_eleanor",
+      "questionId": "q_wedding",
+      "guestId": "gst_eleanor",
+      "coveredEventIds": [
+        "evt_ceremony",
+        "evt_dinner"
+      ]
+    },
+    {
+      "id": "req_wedding_mateo",
+      "questionId": "q_wedding",
+      "guestId": "gst_mateo",
+      "coveredEventIds": [
+        "evt_ceremony",
+        "evt_dinner"
+      ]
+    },
+    {
+      "id": "req_wedding_lucia",
+      "questionId": "q_wedding",
+      "guestId": "gst_lucia",
+      "coveredEventIds": [
+        "evt_ceremony",
+        "evt_dinner"
+      ]
+    },
+    {
+      "id": "req_wedding_priya",
+      "questionId": "q_wedding",
+      "guestId": "gst_priya",
+      "coveredEventIds": [
+        "evt_ceremony",
+        "evt_dinner"
+      ]
+    },
+    {
+      "id": "req_wedding_benjamin",
+      "questionId": "q_wedding",
+      "guestId": "gst_benjamin",
+      "coveredEventIds": [
+        "evt_ceremony",
+        "evt_dinner"
+      ]
+    },
+    {
+      "id": "req_wedding_noor",
+      "questionId": "q_wedding",
+      "guestId": "gst_noor",
+      "coveredEventIds": [
+        "evt_ceremony",
+        "evt_dinner"
+      ]
+    },
+    {
+      "id": "req_brunch_amina",
+      "questionId": "q_brunch",
+      "guestId": "gst_amina",
+      "coveredEventIds": [
+        "evt_brunch"
+      ]
+    },
+    {
+      "id": "req_brunch_theodore",
+      "questionId": "q_brunch",
+      "guestId": "gst_theodore",
+      "coveredEventIds": [
+        "evt_brunch"
+      ]
+    },
+    {
+      "id": "req_brunch_eleanor",
+      "questionId": "q_brunch",
+      "guestId": "gst_eleanor",
+      "coveredEventIds": [
+        "evt_brunch"
+      ]
+    },
+    {
+      "id": "req_brunch_mateo",
+      "questionId": "q_brunch",
+      "guestId": "gst_mateo",
+      "coveredEventIds": [
+        "evt_brunch"
+      ]
+    },
+    {
+      "id": "req_brunch_lucia",
+      "questionId": "q_brunch",
+      "guestId": "gst_lucia",
+      "coveredEventIds": [
+        "evt_brunch"
+      ]
+    },
+    {
+      "id": "req_brunch_priya",
+      "questionId": "q_brunch",
+      "guestId": "gst_priya",
+      "coveredEventIds": [
+        "evt_brunch"
+      ]
+    },
+    {
+      "id": "req_brunch_benjamin",
+      "questionId": "q_brunch",
+      "guestId": "gst_benjamin",
+      "coveredEventIds": [
+        "evt_brunch"
+      ]
+    },
+    {
+      "id": "req_brunch_noor",
+      "questionId": "q_brunch",
+      "guestId": "gst_noor",
+      "coveredEventIds": [
+        "evt_brunch"
+      ]
+    }
+  ],
+  "currentResponses": [
+    {
+      "requestId": "req_rehearsal_dinner_amina",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_amina"
+    },
+    {
+      "requestId": "req_rehearsal_dinner_theodore",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_theodore"
+    },
+    {
+      "requestId": "req_welcome_amina",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_amina"
+    },
+    {
+      "requestId": "req_welcome_theodore",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_theodore"
+    },
+    {
+      "requestId": "req_welcome_eleanor",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_eleanor"
+    },
+    {
+      "requestId": "req_welcome_mateo",
+      "answer": "declined",
+      "saved": true,
+      "source": "delegate",
+      "savedById": "gst_eleanor"
+    },
+    {
+      "requestId": "req_welcome_lucia",
+      "answer": "accepted",
+      "saved": true,
+      "source": "delegate",
+      "savedById": "gst_eleanor"
+    },
+    {
+      "requestId": "req_welcome_priya",
+      "answer": "declined",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_priya"
+    },
+    {
+      "requestId": "req_welcome_benjamin",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_benjamin"
+    },
+    {
+      "requestId": "req_welcome_noor",
+      "answer": "unanswered",
+      "saved": false,
+      "source": null,
+      "savedById": null
+    },
+    {
+      "requestId": "req_wedding_amina",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_amina"
+    },
+    {
+      "requestId": "req_wedding_theodore",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_theodore"
+    },
+    {
+      "requestId": "req_wedding_eleanor",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_eleanor"
+    },
+    {
+      "requestId": "req_wedding_mateo",
+      "answer": "accepted",
+      "saved": true,
+      "source": "delegate",
+      "savedById": "gst_eleanor"
+    },
+    {
+      "requestId": "req_wedding_lucia",
+      "answer": "accepted",
+      "saved": true,
+      "source": "delegate",
+      "savedById": "gst_eleanor"
+    },
+    {
+      "requestId": "req_wedding_priya",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_priya"
+    },
+    {
+      "requestId": "req_wedding_benjamin",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_benjamin"
+    },
+    {
+      "requestId": "req_wedding_noor",
+      "answer": "unanswered",
+      "saved": false,
+      "source": null,
+      "savedById": null
+    },
+    {
+      "requestId": "req_brunch_amina",
+      "answer": "declined",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_amina"
+    },
+    {
+      "requestId": "req_brunch_theodore",
+      "answer": "declined",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_theodore"
+    },
+    {
+      "requestId": "req_brunch_eleanor",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_eleanor"
+    },
+    {
+      "requestId": "req_brunch_mateo",
+      "answer": "accepted",
+      "saved": true,
+      "source": "delegate",
+      "savedById": "gst_eleanor"
+    },
+    {
+      "requestId": "req_brunch_lucia",
+      "answer": "unanswered",
+      "saved": false,
+      "source": null,
+      "savedById": null
+    },
+    {
+      "requestId": "req_brunch_priya",
+      "answer": "accepted",
+      "saved": true,
+      "source": "guest",
+      "savedById": "gst_priya"
+    },
+    {
+      "requestId": "req_brunch_benjamin",
+      "answer": "unanswered",
+      "saved": false,
+      "source": null,
+      "savedById": null
+    },
+    {
+      "requestId": "req_brunch_noor",
+      "answer": "unanswered",
+      "saved": false,
+      "source": null,
+      "savedById": null
+    }
+  ],
+  "responseHistory": [
+    {
+      "id": "hist_priya_welcome_initial",
+      "requestId": "req_welcome_priya",
+      "answer": "accepted",
+      "actorId": "gst_priya",
+      "source": "guest",
+      "recordedAt": "2030-05-20T11:00:00-05:00",
+      "supersededById": "hist_priya_welcome_update"
+    },
+    {
+      "id": "hist_priya_welcome_update",
+      "requestId": "req_welcome_priya",
+      "answer": "declined",
+      "actorId": "gst_priya",
+      "source": "guest",
+      "recordedAt": "2030-05-24T09:15:00-05:00",
+      "supersededById": null
+    },
+    {
+      "id": "hist_priya_wedding_initial",
+      "requestId": "req_wedding_priya",
+      "answer": "accepted",
+      "actorId": "gst_priya",
+      "source": "guest",
+      "recordedAt": "2030-05-20T11:00:00-05:00",
+      "supersededById": null
+    }
+  ],
+  "saveAttempts": [
+    {
+      "id": "save_amina_wedding_failure",
+      "requestId": "req_wedding_amina",
+      "proposedAnswer": "declined",
+      "state": "failed",
+      "savedAnswerBefore": "accepted",
+      "currentAnswerAfter": "accepted"
+    },
+    {
+      "id": "save_benjamin_brunch_uncertain",
+      "requestId": "req_brunch_benjamin",
+      "proposedAnswer": "accepted",
+      "state": "uncertain",
+      "savedAnswerBefore": "unanswered",
+      "currentAnswerAfter": "unanswered"
+    }
+  ],
+  "eventChanges": [],
+  "travelInformation": [
+    {
+      "id": "travel_arrival_friday",
+      "kind": "travel",
+      "title": "Arriving Friday",
+      "body": "From Cedar Vale station, use the east taxi stand for Juniper Hall. Guests driving Friday should enter from Juniper Lane and follow signs to the south lot.",
+      "currentBody": "From Cedar Vale station, use the east taxi stand for Juniper Hall. Guests driving Friday should enter from Juniper Lane and follow signs to the south lot.",
+      "location": "Juniper Hall, 4 Juniper Lane, Cedar Vale",
+      "link": "",
+      "audienceType": "all",
+      "audienceEventId": null,
+      "materialChange": false,
+      "changedAt": null,
+      "reservationStatus": "not applicable",
+      "externalEndpoint": null
+    },
+    {
+      "id": "travel_arrival_saturday",
+      "kind": "travel",
+      "title": "Arriving Saturday",
+      "body": "Plan to reach Juniper Hall by 4:00 PM. Use the east garden gate; the ceremony begins at 4:30 PM.",
+      "currentBody": "Plan to reach Juniper Hall by 4:00 PM. Use the east garden gate; the ceremony begins at 4:30 PM.",
+      "location": "Juniper Hall, 4 Juniper Lane, Cedar Vale",
+      "link": "",
+      "audienceType": "all",
+      "audienceEventId": null,
+      "materialChange": false,
+      "changedAt": null,
+      "reservationStatus": "not applicable",
+      "externalEndpoint": null
+    },
+    {
+      "id": "travel_cedar_house",
+      "kind": "lodging",
+      "title": "Cedar House lodging",
+      "body": "Cedar House is a fictional lodging option at 12 Orchard Lane, a 10-minute walk from Juniper Hall. Check-in is after 3:00 PM Friday and checkout is by 11:00 AM Sunday. Request a room by May 10. Guests arrange and pay for rooms directly. If you are joining brunch, check out before heading over.",
+      "currentBody": "Cedar House is a fictional lodging option at 12 Orchard Lane, a 10-minute walk from Juniper Hall. Check-in is after 3:00 PM Friday and checkout is by 11:00 AM Sunday. Request a room by May 10. Guests arrange and pay for rooms directly. If you are joining brunch, check out before heading over.",
+      "location": "12 Orchard Lane, Cedar Vale",
+      "link": "",
+      "audienceType": "all",
+      "audienceEventId": null,
+      "materialChange": false,
+      "changedAt": null,
+      "reservationStatus": "not reserved",
+      "externalEndpoint": null
+    }
+  ],
+  "accessStates": [
+    {
+      "id": "entry_benjamin_old",
+      "guestId": "gst_benjamin",
+      "state": "outdated",
+      "revealsOtherRecords": false
+    },
+    {
+      "id": "entry_benjamin_current",
+      "guestId": "gst_benjamin",
+      "state": "current",
+      "revealsOtherRecords": false
+    }
+  ],
+  "comparisonStates": {
+    "dataStates": [
+      {
+        "id": "state_organizer_empty",
+        "kind": "empty",
+        "expectedVisibleOutcome": "The couple sees the first event action and no invented progress or totals.",
+        "standalone": true
+      },
+      {
+        "id": "state_organizer_loading",
+        "kind": "loading",
+        "preservedContext": "Attendance questions with the active event filter",
+        "expectedVisibleOutcome": "The view says what is loading and keeps the selected context recognizable."
+      },
+      {
+        "id": "state_organizer_load_failure",
+        "kind": "failure",
+        "preservedContext": "Attendance questions with the active event filter",
+        "expectedVisibleOutcome": "The view names the failure, offers retry, and does not replace saved totals with zeros."
+      },
+      {
+        "id": "state_guest_uncertain_save",
+        "kind": "uncertain-save",
+        "saveAttemptId": "save_benjamin_brunch_uncertain",
+        "expectedVisibleOutcome": "The guest sees that brunch acceptance is not confirmed and the saved answer remains unanswered until checked."
+      }
+    ],
+    "presentationConditions": [
+      {
+        "id": "condition_guest_phone",
+        "viewport": "390 by 844 CSS pixels",
+        "densityPurpose": "Test invitation scope, attendance questions, schedule, and lodging."
+      },
+      {
+        "id": "condition_organizer_desktop",
+        "viewport": "1440 by 1000 CSS pixels",
+        "densityPurpose": "Test reply queue, event totals, and people behind them together."
+      },
+      {
+        "id": "condition_larger_text",
+        "textScale": "200 percent",
+        "expectedVisibleOutcome": "Core scope, state, and actions remain available without horizontal page scrolling."
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "S1",
+      "title": "Private Friday events and a schedule-only rehearsal",
+      "entryPath": "Amina opens her Friday schedule; Theodore opens his own invitation separately.",
+      "initialSavedState": {
+        "activeGuestId": "gst_amina",
+        "selectionId": "req_rehearsal_dinner_amina"
+      },
+      "proposedActions": [
+        "Review Amina's ceremony rehearsal and rehearsal-dinner access.",
+        "Confirm Theodore sees the dinner but not the rehearsal."
+      ],
+      "resultingCurrentState": {
+        "responseMutation": "none",
+        "rehearsalReplyState": "not applicable"
+      },
+      "expectedVisibleOutcome": {
+        "guest": "Amina sees the rehearsal marked No reply needed and a separate dinner question.",
+        "organizer": "The rehearsal shows one invited person and no attendance totals."
+      }
+    },
+    {
+      "id": "S2",
+      "title": "One wedding question per person",
+      "entryPath": "Eleanor opens the household reply view with explicit authority for Mateo and Lucía.",
+      "initialSavedState": {
+        "activeGuestId": "gst_eleanor",
+        "questionId": "q_wedding",
+        "answers": "all three unanswered"
+      },
+      "proposedActions": [
+        "Save one wedding answer for Eleanor, Mateo, and Lucía.",
+        "Review ceremony and reception as the two events covered by each answer."
+      ],
+      "resultingCurrentState": {
+        "savedRequestIds": [
+          "req_wedding_eleanor",
+          "req_wedding_mateo",
+          "req_wedding_lucia"
+        ],
+        "answers": "accepted"
+      },
+      "expectedVisibleOutcome": {
+        "guest": "Three people each have one saved wedding answer covering ceremony and reception.",
+        "organizer": "The queue counts three person-question requests, not six schedule rows."
+      }
+    },
+    {
+      "id": "S3",
+      "title": "Friday and Saturday arrivals with open Sunday plans",
+      "entryPath": "Mateo checks his Saturday arrival, welcome-drinks decline, wedding answer, and brunch answer.",
+      "initialSavedState": {
+        "activeGuestId": "gst_mateo",
+        "selectionId": "req_welcome_mateo"
+      },
+      "proposedActions": [
+        "Review Saturday arrival guidance.",
+        "Keep welcome drinks declined and wedding attendance accepted."
+      ],
+      "resultingCurrentState": {
+        "responseMutation": "none"
+      },
+      "expectedVisibleOutcome": {
+        "guest": "Arrival guidance does not change invitation scope or imply lodging.",
+        "organizer": "Declined and unanswered requests remain distinct."
+      }
+    },
+    {
+      "id": "S4",
+      "title": "One organizer correction updates two event totals",
+      "entryPath": "The organizer opens Priya's saved wedding answer.",
+      "initialSavedState": {
+        "requestId": "req_wedding_priya",
+        "answer": "accepted"
+      },
+      "proposedActions": [
+        "Record a phone-reported change to not attending.",
+        "Check ceremony and reception totals."
+      ],
+      "resultingCurrentState": {
+        "requestId": "req_wedding_priya",
+        "answer": "declined",
+        "coveredEventIds": [
+          "evt_ceremony",
+          "evt_dinner"
+        ]
+      },
+      "expectedVisibleOutcome": {
+        "guest": "Priya sees one current wedding answer and its source history.",
+        "organizer": "Both covered event totals change together without a partial result."
+      }
+    },
+    {
+      "id": "S5",
+      "title": "Response-mode and invitation-scope guards",
+      "entryPath": "The organizer opens the schedule-only rehearsal and its response configuration.",
+      "initialSavedState": {
+        "eventId": "evt_rehearsal",
+        "responseMode": "none"
+      },
+      "proposedActions": [
+        "Attempt a raw reply write against the rehearsal.",
+        "Review the guard on changing configured events with assignments or replies."
+      ],
+      "resultingCurrentState": {
+        "responseMutation": "none",
+        "responseMode": "none"
+      },
+      "expectedVisibleOutcome": {
+        "guest": "The rehearsal says No reply needed and offers no attendance control.",
+        "organizer": "The event shows invited scope without fake zero attendance."
+      }
+    },
+    {
+      "id": "S6",
+      "title": "Recovery, uncertain save, and practical lodging",
+      "entryPath": "Benjamin follows an outdated entry, recovers his invitation, and checks his unresolved brunch and lodging guidance.",
+      "initialSavedState": {
+        "guestId": "gst_benjamin",
+        "entryStateId": "entry_benjamin_old",
+        "brunchAnswer": "unanswered"
+      },
+      "proposedActions": [
+        "Recover without seeing another guest.",
+        "Check an uncertain brunch save before retrying.",
+        "Find Cedar House details and the direct-arrangement deadline."
+      ],
+      "resultingCurrentState": {
+        "entryStateId": "entry_benjamin_current",
+        "reservationImplied": false,
+        "brunchAnswer": "unanswered"
+      },
+      "expectedVisibleOutcome": {
+        "guest": "Benjamin retains saved truth, sees an unresolved brunch, and knows lodging is not reserved.",
+        "organizer": "Recovery changes no eligibility or response."
+      }
+    }
+  ],
+  "scenarioUse": {
+    "populatedSnapshot": "Top-level records are the coherent fictional weekend shown after a reset.",
+    "independentRuns": "Reset creates a fresh copy for each S1-S6 case. No case carries mutations into another.",
+    "S1Setup": "Use the populated snapshot. Amina is the active guest; the action explains the private Friday scope without changing replies.",
+    "S2Setup": "Set req_wedding_eleanor, req_wedding_mateo, and req_wedding_lucia to unanswered before the action. Keep Eleanor's explicit reply authority.",
+    "S3Setup": "Use Mateo's populated arrival and attendance records without mutation.",
+    "S4Setup": "Set req_wedding_priya to accepted and retain only its initial history before the organizer correction.",
+    "S5Setup": "Use the schedule-only rehearsal unchanged. Its action exercises the low-level no-reply guard.",
+    "S6Setup": "Use Benjamin's current saved answers and unanswered brunch, but start from the outdated entry state.",
+    "emptyState": "The empty state retains only wedding and organizing-couple context; every other data collection is empty."
+  },
+  "expectedSummaries": {
+    "overall": {
+      "guests": 8,
+      "households": 2,
+      "scheduleEvents": 6,
+      "attendanceQuestions": 4,
+      "uniqueReplyRequests": 26,
+      "accepted": 17,
+      "declined": 4,
+      "unanswered": 5
+    },
+    "byEvent": [
+      {
+        "eventId": "evt_rehearsal",
+        "invited": 1,
+        "replyRequired": false
+      },
+      {
+        "eventId": "evt_rehearsal_dinner",
+        "eligible": 2,
+        "accepted": 2,
+        "declined": 0,
+        "unanswered": 0
+      },
+      {
+        "eventId": "evt_welcome",
+        "eligible": 8,
+        "accepted": 5,
+        "declined": 2,
+        "unanswered": 1
+      },
+      {
+        "eventId": "evt_ceremony",
+        "eligible": 8,
+        "accepted": 7,
+        "declined": 0,
+        "unanswered": 1
+      },
+      {
+        "eventId": "evt_dinner",
+        "eligible": 8,
+        "accepted": 7,
+        "declined": 0,
+        "unanswered": 1
+      },
+      {
+        "eventId": "evt_brunch",
+        "eligible": 8,
+        "accepted": 3,
+        "declined": 2,
+        "unanswered": 3
+      }
+    ],
+    "byHousehold": [
+      {
+        "householdId": "hh_laurent",
+        "uniqueReplyRequests": 8,
+        "accepted": 6,
+        "declined": 2,
+        "unanswered": 0,
+        "completion": "complete"
+      },
+      {
+        "householdId": "hh_ortega",
+        "uniqueReplyRequests": 9,
+        "accepted": 7,
+        "declined": 1,
+        "unanswered": 1,
+        "completion": "partial"
+      }
+    ]
+  }
+}

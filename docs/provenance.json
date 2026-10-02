@@ -1,0 +1,82 @@
+{
+  "source": "Wedding guest experience definition v0.4 and selected A+C prototype",
+  "exported": "2026-10-02",
+  "note": "Public derivative. Original research, session state, discarded concepts and private evidence remain outside this repository. Source hashes identify imported files before public-package edits.",
+  "files": [
+    {
+      "path": "prototype/concepts/combined.html",
+      "source_sha256": "37f014de508587b406a1bf487fb0876a11c90f8a82f221231729d91535d1b60e"
+    },
+    {
+      "path": "prototype/concepts/combined-app.mjs",
+      "source_sha256": "13a3767a288cf30d0386a59096f74e94405563c401167071c4e4fcafdb4980a1"
+    },
+    {
+      "path": "prototype/concepts/combined-state.mjs",
+      "source_sha256": "37475ce741a8dc683bc007914ac911fe674d2ee7c73672dcf748f3175f5d972c"
+    },
+    {
+      "path": "prototype/concepts/combined.css",
+      "source_sha256": "b547021a5a9a2d7ce9ba8005f856ba4d0a159e04c100efb730f9833768ae24d0"
+    },
+    {
+      "path": "prototype/concepts/guest-theme.css",
+      "source_sha256": "8e76ed462e182c6bd7e174e46e9ac8f3b55127c5d7c447d93641feb5b06a5af0"
+    },
+    {
+      "path": "prototype/concepts/state.mjs",
+      "source_sha256": "7d86554c007938593f14aa4d525d282c4e2cde534357eb98c072af05fe2f4af1"
+    },
+    {
+      "path": "prototype/concepts/site-style.html",
+      "source_sha256": "864ac28dd9d60ccb328f5668a2ce74675de1839639058d60db5fcdb08b7ad286"
+    },
+    {
+      "path": "prototype/concepts/site-style.mjs",
+      "source_sha256": "4f9c9f94f34b2d587fbf255e6445c74f82d1f18cad3502cade9ec85528b4abd4"
+    },
+    {
+      "path": "prototype/concepts/site-style.css",
+      "source_sha256": "264d9ebbe295c77c569e7ad9bc80aace2303d84abe5c6637d77bdee7707ab11a"
+    },
+    {
+      "path": "prototype/concepts/style-config.mjs",
+      "source_sha256": "e38ad7c8f755536196ba7e678bbbbbb2790dd6f27af7c860e0068acc417753dd"
+    },
+    {
+      "path": "prototype/concepts/data/concept-data.json",
+      "source_sha256": "67fadfcc9a5613c76dc0f6a404d0e7fc3feae8b4fbce316c0dce9587c89390e4"
+    },
+    {
+      "path": "prototype/concepts/assets/fonts/PinyonScript-Regular.ttf",
+      "source_sha256": "4aab130a6ed27f8b8117738c84a5602edf9300cdcc0651a9a65bf96f451ac29a"
+    },
+    {
+      "path": "prototype/concepts/assets/fonts/OFL.txt",
+      "source_sha256": "61d07cb0eaa943943648df2b11d0c2210e772053c192871e13f680b53fe0b77e"
+    },
+    {
+      "path": "prototype/concepts/assets/fonts/FONTLOG.txt",
+      "source_sha256": "6b0d61b09fa22ccb28235dc5c1d4cc87676d0fe9b98ba69f0b1b26bf62f883e2"
+    },
+    {
+      "path": "tests/weekend-story/state-contract.test.mjs",
+      "source_sha256": "57fd32bbe194470e998fa98fb815c59a436d2c3a7ea1c9d51e287896ce946adc"
+    },
+    {
+      "path": "docs/brd.md",
+      "source_sha256": "80fc0ba67fbaebddb13bda37dd21075c727c1551e55b3add98f1e3b2782255af",
+      "changes": "Remove private source links and identifying references; add public-derivative note."
+    },
+    {
+      "path": "docs/prd.md",
+      "source_sha256": "b2c62b4cca9b1d464de2a445be8e2452612e440ec5541ca72340a637b2075328",
+      "changes": "Remove private source links and identifying references; add public-derivative note."
+    },
+    {
+      "path": "docs/user-stories.md",
+      "source_sha256": "15b25bf0399129a9cdd34c6037b0a46c1ab4ddd53951f254527e279b16b2393e",
+      "changes": "Remove private source links and identifying references; add public-derivative note."
+    }
+  ]
+}
