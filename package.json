@@ -4,6 +4,12 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "test": "node tests/weekend-story/state-contract.test.mjs"
+    "test": "node tests/weekend-story/state-contract.test.mjs",
+    "build": "node tools/build.mjs",
+    "preview": "python3 -m http.server 8796 --bind 127.0.0.1 --directory dist",
+    "test:e2e": "playwright test -c tests/playwright.config.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
   }
 }

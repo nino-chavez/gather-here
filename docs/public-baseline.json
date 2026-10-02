@@ -1,0 +1,24 @@
+{
+  "created": "2026-10-02",
+  "kind": "public-source-identity",
+  "status": "design-only; durable P1-P8 NOT_RUN",
+  "note": "Self-contained source identity for receiving agents. No private file dependency. Changes require an explicit updated review record, not a claim of inherited acceptance.",
+  "files": [
+    {
+      "path": "docs/brd.md",
+      "sha256": "cd174f753fcb2adf661c4f5631dcb93359c0c15869d7bb93910a3d916cecac94"
+    },
+    {
+      "path": "docs/prd.md",
+      "sha256": "6a205376dd4d45428daf80381b5db47437b1643aee1a23584461ede44ab9b0c6"
+    },
+    {
+      "path": "docs/user-stories.md",
+      "sha256": "9bdd3943cae79ea422c505ce728caa06c5c686e26c2d04f049e2929b9ea5c3f2"
+    },
+    {
+      "path": "docs/rsvp-contract.md",
+      "sha256": "50d968743c5dc323cac0ff9dcb19d3ab671eeec43e5a5008bfcfc40a75afab72"
+    }
+  ]
+}

@@ -77,6 +77,11 @@
       "path": "docs/user-stories.md",
       "source_sha256": "15b25bf0399129a9cdd34c6037b0a46c1ab4ddd53951f254527e279b16b2393e",
       "changes": "Remove private source links and identifying references; add public-derivative note."
+    },
+    {
+      "path": "docs/rsvp-contract.md",
+      "source_sha256": "1a95342ad7c9d6d42f3ef25ae91e034644d555c3f4ee99b55cd5f7a6986c0f68",
+      "changes": "Public derivative note, removal of private links and stakeholder identity; current setup owned by AGENT-START and SETUP."
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "status": "inventory-template-not-provisioned",
+  "mode": "single-wedding",
+  "environment": "fictional-rehearsal",
+  "repository_url": null,
+  "deployment_branch": "main",
+  "cloudflare_account_id": null,
+  "worker_name": null,
+  "app_origin": null,
+  "supabase_project_ref": null,
+  "supabase_region": null,
+  "supabase_plan": null,
+  "smtp_sender_domain": null,
+  "smtp_delivery_verified": false,
+  "private_image_bucket": null,
+  "custom_domain": null,
+  "approved_spending_limit": null,
+  "deployed_commit": null,
+  "migration_version": null,
+  "restore_drill_completed": false,
+  "notes": "No secrets or real guest identities. Copy to an ignored local file. These values are not consumed by the static walkthrough."
+}

@@ -1,0 +1,12 @@
+import { cp, mkdir, rm, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+const root = fileURLToPath(new URL('../', import.meta.url));
+const out = new URL('../dist/', import.meta.url);
+await rm(out, { recursive: true, force: true });
+await mkdir(out, { recursive: true });
+await cp(`${root}site`, out, { recursive: true });
+await mkdir(new URL('prototype/', out), { recursive: true });
+await cp(`${root}prototype/concepts`, new URL('prototype/concepts/', out), { recursive: true });
+await writeFile(new URL('robots.txt', out), 'User-agent: *\nDisallow: /\n');
+await writeFile(new URL('_headers', out), '/*\n  X-Robots-Tag: noindex, nofollow\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n');
+console.log('Built walkthrough and fictional prototype into dist.');
