@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 async function blockExternal(page) {
   await page.route('**/*', route => {
     const url = new URL(route.request().url());
-    if (['127.0.0.1', 'localhost', '::1'].includes(url.hostname)) return route.continue();
+    if (['127.0.0.1', 'localhost', '::1', new URL(process.env.BASE_URL || 'http://127.0.0.1:8796').hostname].includes(url.hostname)) return route.continue();
     return route.abort('blockedbyclient');
   });
 }
@@ -47,7 +47,7 @@ for (const device of [
     await expect(review).toContainText('Ceremony and Reception');
     await page.screenshot({ path: testInfo.outputPath(`${device.name}-shared-question-review.png`), fullPage: true });
     await page.getByRole('button', { name: 'Save reply', exact: true }).click();
-    await expect(page.getByText(/Reply saved.*Wedding ceremony and reception.*Covers Ceremony and Reception/)).toBeVisible();
+    await expect(page.locator('#product-frame').getByText(/Reply saved.*Wedding ceremony and reception.*Covers Ceremony and Reception/)).toBeVisible();
     await expect(page.locator('.saved-line')).toContainText('Attending');
     await page.getByRole('button', { name: 'Review all replies', exact: true }).click();
     await expect(page.getByText(/Eleanor Cárdenas-Ortega/).first()).toBeVisible();
@@ -82,7 +82,7 @@ test('schedule-only event shows invited scope without reply totals and rejects r
   await page.getByRole('button', { name: 'Edit event', exact: true }).click();
   await page.getByLabel('Attendance response').selectOption('separate');
   await page.getByRole('button', { name: 'Mark ready' }).click();
-  await expect(page.getByText(/cannot change.*while invitations or replies exist/i)).toBeVisible();
+  await expect(page.locator('#product-frame').getByText(/cannot change.*while invitations or replies exist/i)).toBeVisible();
 });
 
 test('new event defaults to a separate attendance question and can intentionally require no reply', async ({ page }) => {
@@ -95,15 +95,15 @@ test('new event defaults to a separate attendance question and can intentionally
   await page.getByLabel('Location to follow').check();
   await page.getByLabel('Attendance response').selectOption('none');
   await page.getByRole('button', { name: 'Mark ready' }).click();
-  await expect(page.getByText(/Fictional Monday walk is ready.*No reply needed/i)).toBeVisible();
+  await expect(page.locator('#product-frame').getByText(/Fictional Monday walk is ready.*No reply needed/i)).toBeVisible();
 });
 
 test('uncertain shared saves preserve both event totals until current truth is checked', async ({ page }) => {
   await open(page, '/prototype/concepts/combined.html?role=guest&scenario=S2&state=uncertain');
   await page.getByRole('radio', { name: 'Attending', exact: true }).check();
   await page.getByRole('button', { name: 'Save reply' }).click();
-  await expect(page.getByText(/Could not confirm.*Wedding ceremony and reception/)).toBeVisible();
+  await expect(page.locator('#product-frame').getByText(/Could not confirm.*Wedding ceremony and reception/)).toBeVisible();
   await page.getByRole('button', { name: 'Check saved reply' }).click();
-  await expect(page.getByText(/Current saved reply is unanswered.*proposed accepted was not saved/i)).toBeVisible();
+  await expect(page.locator('#product-frame').getByText(/Current saved reply is unanswered.*proposed accepted was not saved/i)).toBeVisible();
   await expect(page.getByRole('radio', { name: 'Attending', exact: true })).toBeChecked();
 });

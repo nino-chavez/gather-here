@@ -52,5 +52,5 @@ test('public navigation and asset paths resolve',async({page,request})=>{
  for(const url of paths) expect((await request.get(url)).status(),url).toBe(200);
  await page.goto('/prototype/concepts/combined.html?role=guest&scenario=S2&section=weekend');
  await page.getByRole('link',{name:'Back to walkthrough'}).click();
- await expect(page).toHaveURL(/index.html#try$/);
+ await expect(page).toHaveURL(/\/(?:index\.html)?#try$/);
 });

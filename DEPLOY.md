@@ -17,3 +17,11 @@ Use Workers Builds for the future application’s automatic deployment from GitH
 ## Recovery
 
 For the presentation, restore a known-good Pages deployment or publish a corrective commit. For the future app, verify database compatibility before reverting code. Database restore and guest-data deletion require an operating-owner decision and a rehearsed recovery procedure.
+
+## Verified presentation release
+
+October 2, 2026: Cloudflare Pages deployment `8b2c567e-4b77-4b43-ba5c-088d87b68009` reported `deploy: success` for commit `e721c0dcd12b4fae218496b57add73467c5830d0`. The public alias and `/setup` rendered in the in-app browser. All 12 Playwright checks passed against the hosted alias, including desktop/mobile presentation, navigation, clipboard handoff, and fictional RSVP journeys.
+
+The copied browser tests were adjusted to allow the explicitly selected test host, accept Cloudflare’s canonical clean URLs, and distinguish visible notices from their screen-reader announcements. No product behavior was changed for those test adjustments.
+
+The clean exported checkout passed dependency install, state checks, and static build without private sibling repositories. Gitleaks found no credentials in the curated publication snapshot. This evidence covers the static presentation and fictional browser behavior only. It does not establish an implemented MVP, customer acceptance, authentication, durable storage, mail delivery, or restore readiness.
