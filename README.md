@@ -2,7 +2,7 @@
 
 A wedding-weekend product walkthrough, interactive prototype, and implementation handoff. Start with **one wedding in your own accounts**. Gather Here is a working name.
 
-Explore the proposed experience on the hosted walkthrough, or give your agent this repository and [start here](docs/AGENT-START.md). The handoff maps the product to SvelteKit, Cloudflare Workers, Supabase, and sign-in email delivery.
+Explore the [hosted walkthrough](https://gather-here.pages.dev) and [single-wedding setup guide](https://gather-here.pages.dev/setup.html), or give your agent this repository and [start here](docs/AGENT-START.md). The handoff maps the product to SvelteKit, Cloudflare Workers, Supabase, and sign-in email delivery.
 
 **This is not a ready-to-install wedding application.** The current prototype uses fictional people and browser-only state. Durable storage, private sign-in, real email, and the production application remain to be built. Do not enter real guest information.
 
